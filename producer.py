@@ -1,10 +1,10 @@
 from kafka import KafkaProducer
 import time
 
-# Configure Kafka producer
+
 producer = KafkaProducer(
-    bootstrap_servers='localhost:9093',  # Replace with your Kafka broker address
-    value_serializer=lambda v: str(v).encode('utf-8')  # Convert values to bytes
+    bootstrap_servers='localhost:9093', 
+    value_serializer=lambda v: str(v).encode('utf-8') 
 )
 
 # Produce a message to a Kafka topic
